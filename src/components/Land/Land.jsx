@@ -4,7 +4,6 @@ import { init } from 'ityped';
 
 import './Land.scss';
 
-
 function Land() {
 
     const textRef = useRef()

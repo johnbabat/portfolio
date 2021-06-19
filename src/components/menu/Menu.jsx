@@ -1,4 +1,4 @@
-import './Menu.scss'
+import './Menu.scss';
 
 function Menu({ menuOpen, setMenuOpen }) {
     return (

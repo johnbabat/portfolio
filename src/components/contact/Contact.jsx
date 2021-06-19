@@ -1,5 +1,6 @@
-import { useState } from 'react'
-import './Contact.scss'
+import { useState } from 'react';
+
+import './Contact.scss';
 
 function Contact({ toggleMode }) {
 

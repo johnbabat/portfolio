@@ -1,8 +1,8 @@
-import './Topbar.scss'
-import { ReactComponent as Phone} from '../../assests/svgs/phone.svg'
-import { ReactComponent as Mail} from '../../assests/svgs/mail.svg'
-import { ReactComponent as Moon} from '../../assests/svgs/moon.svg'
+import { ReactComponent as Phone} from '../../assests/svgs/phone.svg';
+import { ReactComponent as Mail} from '../../assests/svgs/mail.svg';
+import { ReactComponent as Moon} from '../../assests/svgs/moon.svg';
 
+import './Topbar.scss';
 
 function Topbar({ menuOpen, setMenuOpen, toggleMode, setToggleMode }) {
     return (

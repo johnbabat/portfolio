@@ -1,15 +1,16 @@
+import { useEffect, useState } from 'react';
 import Topbar from './components/topbar/Topbar';
 import Intro from './components/intro/Intro';
 import Portfolio from './components/portfolio/Portfolio';
 import ToolsPack from './components/toolsPack/ToolsPack';
 import Contact from './components/contact/Contact';
+import Menu from './components/menu/Menu';
+import Land from './components/land/Land';
 
 import { isChrome, vh } from './utils/checkIfChrome';
 
 import './App.scss';
-import { useEffect, useState } from 'react';
-import Menu from './components/menu/Menu';
-import Land from './components/Land/Land';
+
 
 function App() {
 

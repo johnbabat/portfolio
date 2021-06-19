@@ -1,4 +1,4 @@
-import './PortfolioList.scss'
+import './PortfolioList.scss';
 
 function PortfolioList({title, selected, setSelected, toggleMode}) {
 

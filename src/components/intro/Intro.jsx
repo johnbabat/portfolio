@@ -1,11 +1,13 @@
-import './Intro.scss'
-import { init } from 'ityped'
-import { useEffect, useRef } from 'react'
-import BackgroundAnimation from '../backGroundAnimation/BackGroundAnimation'
+import { useEffect, useRef } from 'react';
+import { init } from 'ityped';
+
+import BackgroundAnimation from '../backGroundAnimation/BackGroundAnimation';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import TwitterIcon from '@material-ui/icons/Twitter';
+
+import './Intro.scss';
 
 function Intro( {toggleMode } ) {
 

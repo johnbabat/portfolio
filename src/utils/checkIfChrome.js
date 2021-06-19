@@ -1,4 +1,4 @@
-var isChrome
+var isChrome;
 var isChromium = window.chrome;
 var winNav = window.navigator;
 var vendorName = winNav.vendor;

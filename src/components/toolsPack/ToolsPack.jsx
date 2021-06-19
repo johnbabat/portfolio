@@ -1,5 +1,6 @@
-import { useState } from 'react'
-import './ToolsPack.scss'
+import { useState } from 'react';
+
+import './ToolsPack.scss';
 
 export default function ToolsPack({ toggleMode }) {
 
