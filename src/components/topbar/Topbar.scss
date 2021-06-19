@@ -10,11 +10,19 @@
     z-index: 3;
     transition: all 2s ease;
 
+    @include mobile {
+        height: 50px;
+    }
+
     .wrapper {
         padding: 10px 30px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include mobile {
+            padding: 5px 30px 2px 30px;
+        }
 
         @include sMobile {
             padding: 5px 30px 0px 30px;
@@ -30,6 +38,10 @@
                 text-decoration: none;
                 color: inherit;
                 margin-right: 40px;
+
+                @include mobile {
+                    font-size: 36px;
+                }
 
                 @include sMobile {
                     font-size: 35px;

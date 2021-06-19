@@ -26,7 +26,7 @@ function Land() {
             backSpeed: 10,
             disableBackTyping: true,
             startDelay: 2700,
-            strings: ['Be with you shortly']
+            strings: ['Letting you in shortly']
         })
 
         init(textRef3.current, {

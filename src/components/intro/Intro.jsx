@@ -1,11 +1,13 @@
 import { useEffect, useRef } from 'react';
 import { init } from 'ityped';
-
-import BackgroundAnimation from '../backGroundAnimation/BackGroundAnimation';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import TwitterIcon from '@material-ui/icons/Twitter';
+
+import BackgroundAnimation from '../backGroundAnimation/BackGroundAnimation';
+import { ReactComponent as Down } from '../../assests/svgs/down.svg';
+
 
 import './Intro.scss';
 
@@ -53,7 +55,7 @@ function Intro( {toggleMode } ) {
                     </ul>
                 </div>
                 <a className='bottomLink' href='#portfolio'>
-                    <img src='assets/images/down.png' alt=''/>
+                    < Down/>
                 </a>
                 <a className='attribution bottomLink' style={{fontSize: '9px'}} href='https://pngtree.com/so/stage-decoration'>
                     stage decoration png from pngtree.com

@@ -73,7 +73,7 @@
         opacity: 0.9;
 
         @include mobile {
-            flex: 0.55;
+            flex: 0.65;
         }
 
         @include sMobile {
@@ -115,6 +115,7 @@
                 background: none;
                 padding-left: 0;
                 align-items: center;
+                justify-content: start;
             }
 
             h1 {
@@ -127,7 +128,7 @@
                 }
 
                 @include mobile {
-                    font-size: 40px;
+                    font-size: 35px;
                     margin: 0;
                 }
 
@@ -140,13 +141,13 @@
             h2 {
                 font-size: 35px;
 
-                @include mobile {
+                @include tablet {
                     font-size: 25px;
                     margin-top: 10px;
                 }
 
-                @include tablet {
-                    font-size: 25px;
+                @include mobile {
+                    font-size: 22px;
                     margin-top: 10px;
                 }
 
@@ -195,7 +196,7 @@
 
                 @include mobile {
                     font-size: 12px;
-                    margin-top: 10px;
+                    margin-top: 7px;
                 }
 
                 @include sMobile {
@@ -207,9 +208,19 @@
             div {
                 display: flex;
 
+                @include mobile {
+                    height: 20px;
+                }
+
                 a {
                     color: rgb(119, 83, 89);
                     margin-right: 10px;
+
+                    svg {
+                        @include mobile {
+                            width: 17px;
+                        }
+                    }
                 }
             }
 
@@ -223,6 +234,7 @@
                 }
 
                 @include mobile {
+                    margin-top: 5px;
                     padding-left: 10px;
                 }
 
@@ -234,13 +246,13 @@
                     background-position-x: 2px;
                     background-position-y: -2px;
 
-                    @include mobile {
-                        margin-bottom: 0.7rem;
-                        font-size: 12px;
-                    }
-
                     @include tablet {
                         margin-bottom: 0.7rem;
+                    }
+
+                    @include mobile {
+                        margin-bottom: 0.5rem;
+                        font-size: 12px;
                     }
                 }
             }
@@ -248,16 +260,21 @@
 
         .bottomLink {
             position: absolute;
-            bottom: 8px;
+            bottom: 15px;
             left: 60%;
             color: green;
 
-            @include mobile {
-                left: 50%;
+            @include tablet {
+                left: 48%;
             }
 
-            img {
-                width: 40px;
+            @include mobile {
+                left: 40%;
+                bottom: 100px;
+            }
+
+            svg {
+                width: 60px;
                 animation: arrowBlink 2s infinite;
             }
 
@@ -311,8 +328,12 @@
                     color: rgb(180, 180, 180);
                 }
             }
+        }
 
-            
+        .bottomLink {
+            svg {
+                fill: white;
+            }
         }
     }
 }

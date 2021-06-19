@@ -26,7 +26,7 @@
   .sections {
     width: 100%;
     height: calc(100vh - 70px);
-    background-color: lightsalmon;
+    background-color: white;
     position: relative;
     top: 70px;
     scroll-behavior: smooth;
@@ -41,7 +41,17 @@
       width: 100vw;
       height: calc(100vh - 70px);
       scroll-snap-align: start;
+
+      @include mobile {
+        height: calc(100vh - 50px);
+      }
     }
+
+    @include mobile {
+      height: calc(100vh - 50px);
+      top: 50px;
+    }
+    
   }
 
   &.justLanded {
