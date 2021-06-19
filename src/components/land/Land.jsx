@@ -12,7 +12,7 @@ function Land() {
 
     useEffect(() => {
         init(textRef.current, {
-            showCursor: true,
+            showCursor: false,
             backDelay: 150,
             backSpeed: 10,
             disableBackTyping: true,
