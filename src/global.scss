@@ -1,0 +1,53 @@
+$mainColor: #15023a;
+
+$phabletWidth: 670px;
+$tabletWidth: 950px;
+$largeTabletWidth: 1150px;
+$tinyMobileWidth: 348px;
+$mobileWidth: 450px;
+$shortMobileHeight: 780px;
+// $fourKWidth: 1450px;
+$fourKHeight: 900px;
+
+@mixin lTablet {
+    @media (max-width: #{$largeTabletWidth}) {
+        @content
+    }
+};
+
+@mixin tablet {
+    @media (max-width: #{$tabletWidth}) {
+        @content
+    }
+};
+
+@mixin phablet {
+    @media (max-width: #{$phabletWidth}) {
+        @content
+    }
+};
+
+@mixin mobile {
+    @media (max-width: #{$mobileWidth}) {
+        @content
+    }
+};
+
+@mixin sMobile {
+    @media (max-height: #{$shortMobileHeight}) and (max-width: #{$tabletWidth}) {
+        @content
+    }
+};
+
+@mixin tMobile {
+    @media (max-width: #{$tinyMobileWidth}) {
+        @content
+    }
+};
+
+@mixin fourK {
+    @media (min-height: #{$fourKHeight}) {
+        @content
+    };
+};
+

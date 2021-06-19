@@ -1,0 +1,114 @@
+@import '../../global.scss';
+
+.contact {
+    background-color: white;
+    display: flex;
+    transition: background-color 2s ease;
+
+    @include tablet {
+        flex-direction: column;
+    }
+
+    @include mobile {
+        flex-direction: column;
+    }
+
+    .left {
+        flex: 1;
+        overflow: hidden;
+        display: flex;
+        
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+            font-size: 30px;
+            transition: all 2s ease;
+        }
+
+        form {
+            width: 70%;
+            height: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            z-index: 1;
+
+            @include tablet {
+                height: 80%;
+            }
+
+            @include tablet {
+                height: 90%;
+            }
+
+            input {
+                width: 300px;
+                height: 30px;
+                font-size: 14px;
+                border-radius: 7px;
+
+                &:focus {
+                    outline: none;
+                    border: 2px solid orange;
+                }
+
+                @include mobile {
+                    width: 200px;
+                    height: 20px;
+                }
+            }
+
+            textarea {
+                width: 300px;
+                height: 200px;
+                font-size: 14px;
+                border-radius: 10px;
+
+                &:focus {
+                    outline: none;
+                    border: 2px solid orange;
+                }
+
+                @include tablet {
+                    height: 120px;
+                }
+
+                @include mobile {
+                    width: 200px;
+                    height: 100px;
+                }
+            }
+
+            button {
+                width: 150px;
+                height: 30px;
+                color: white;
+                background-color: crimson;
+                border: none;
+                border-radius: 10px;
+                font-weight: 500;
+                cursor: pointer ;
+            }
+        }
+    }
+
+    &.dark {
+        background-color: $mainColor;
+        background: linear-gradient(to right, rgb(253, 253, 253) 0%, $mainColor 100%);
+        color: white;
+        transition: background-color 2s ease;
+
+    }
+}

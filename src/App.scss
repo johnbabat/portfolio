@@ -1,0 +1,61 @@
+@import './global.scss';
+
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0px;
+  overflow-x: hidden;
+}
+
+.app {
+  height: 100vh;
+  margin: 0 auto;
+
+  .tempPage {
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+    transition: all 4s ease;
+  }
+
+  .topbar {
+    visibility: visible;
+    opacity: 1;
+    transition: all 2s ease;
+  }
+
+  .sections {
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: lightsalmon;
+    position: relative;
+    top: 70px;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    overflow-y: scroll;
+
+    > * {
+      width: 100vw;
+      height: calc(100vh - 70px);
+      scroll-snap-align: start;
+    }
+  }
+
+  &.justLanded {
+    .sections, .topbar {
+      visibility: hidden;
+      display: none;
+      opacity: 0;
+    }
+    .tempPage {
+      height: 100%;
+      width: 100%;
+      background-color: black;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

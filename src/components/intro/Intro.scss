@@ -1,0 +1,318 @@
+@import '../../global.scss';
+
+.intro {
+    background-color: white;
+    display: flex;
+    transition: background-color 2s ease;
+    min-height: 530px;
+
+    @include tablet {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @include mobile {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .left {
+        flex: 0.5;
+        overflow: hidden;
+
+        @include sMobile {
+            flex: 0.45;
+        }
+
+        .imgContainer {
+            margin-top: 10px;
+            width: 900px;
+            height: 900px;
+            border-radius: 50%;
+            display:  flex;
+            align-items: flex-start;
+            justify-content: center;
+            float: right;
+            overflow: hidden;
+
+            @include tablet {
+                width: 1000px;
+                align-items: flex-end;
+            }
+
+            @include mobile {
+                width: 900px;
+                height: 900px;
+                align-items: flex-start;
+            }
+
+            @include fourK {
+                height: 100%;
+            }
+
+            @include sMobile {
+                width: 650px;
+                height: 650px;
+            }
+            
+
+            img {
+                @include mobile {
+                    height: 70%;
+                }
+
+                @include fourK {
+                    height: inherit;
+                }
+            }
+        }
+    }
+
+    .right {
+        flex: 0.5;
+        opacity: 0.9;
+
+        @include mobile {
+            flex: 0.55;
+        }
+
+        @include sMobile {
+            flex: 0.75;
+        }
+
+        .bg-animation {
+
+            @include tablet {
+                visibility: hidden;
+                opacity: 0;
+            }
+
+            @include mobile {
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+
+        .wrapper {
+            width: 100%;
+            height: 100%;
+            padding-left: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: url('./../../assests/images/colors.png') no-repeat;
+            background-size: 400px 400px;
+            background-position-x: 95%;
+            background-position-y: 100%;
+
+            @include tablet {
+                background: none;
+                padding-left: 0;
+                align-items: center;
+            }
+
+            @include mobile {
+                background: none;
+                padding-left: 0;
+                align-items: center;
+            }
+
+            h1 {
+                font-size: 60px;
+                margin: 10px 0;
+
+                @include tablet {
+                    font-size: 50px;
+                    margin: 0;
+                }
+
+                @include mobile {
+                    font-size: 40px;
+                    margin: 0;
+                }
+
+                @include sMobile {
+                    font-size: 35px;
+                    margin-top: 0
+                }
+            }
+
+            h2 {
+                font-size: 35px;
+
+                @include mobile {
+                    font-size: 25px;
+                    margin-top: 10px;
+                }
+
+                @include tablet {
+                    font-size: 25px;
+                    margin-top: 10px;
+                }
+
+                @include sMobile {
+                    font-size: 22px;
+                    margin-top: 10px;
+                }
+            }
+
+            h3 {
+                font-size: 30px;
+                margin-bottom: 10px;
+                color: rgb(119, 83, 89);
+
+                @include tablet {
+                    font-size: 24px;
+                }
+
+                @include mobile {
+                    font-size: 17px;
+                }
+                
+                span {
+                    font-size: inherit;
+                    color: #d6469f;
+                }
+
+                .ityped-cursor {
+                    animation: blink 1s infinite;
+                }
+
+                @keyframes blink {
+                    50% {
+                        opacity: 1;
+                    }
+                    100% {
+                        opacity: 0;
+                    }
+                }
+            }
+
+            h4 {
+                font-size: 20px;
+                margin-top: 15px;
+                color: rgb(119, 83, 89);
+
+                @include mobile {
+                    font-size: 12px;
+                    margin-top: 10px;
+                }
+
+                @include sMobile {
+                    font-size: 11px;
+                    margin-top: 7px;
+                }
+            }
+
+            div {
+                display: flex;
+
+                a {
+                    color: rgb(119, 83, 89);
+                    margin-right: 10px;
+                }
+            }
+
+            ul {
+                margin-top: 10px;
+                padding: 0;
+                list-style: none;
+
+                @include tablet {
+                    padding-left: 20px;
+                }
+
+                @include mobile {
+                    padding-left: 10px;
+                }
+
+                li {
+                    list-style-type: none;
+                    margin-bottom: 1rem;
+                    background: url('../../assests/svgs/point.svg') no-repeat left top;
+                    padding: 0px 0px 3px 30px;
+                    background-position-x: 2px;
+                    background-position-y: -2px;
+
+                    @include mobile {
+                        margin-bottom: 0.7rem;
+                        font-size: 12px;
+                    }
+
+                    @include tablet {
+                        margin-bottom: 0.7rem;
+                    }
+                }
+            }
+        }
+
+        .bottomLink {
+            position: absolute;
+            bottom: 8px;
+            left: 60%;
+            color: green;
+
+            @include mobile {
+                left: 50%;
+            }
+
+            img {
+                width: 40px;
+                animation: arrowBlink 2s infinite;
+            }
+
+            @keyframes arrowBlink {
+                100% {
+                    opacity: 0;
+                }
+            }
+
+            &.attribution {
+                left: 80%;
+                text-decoration: none;
+
+                @include tablet {
+                    visibility: hidden;
+                    opacity: 0;
+                }
+
+                @include mobile {
+                    visibility: hidden;
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    &.dark {
+        background-color: $mainColor;
+
+        .right {
+            h1 {
+                color: white;
+            }
+            h2 {
+                color: white;
+            }
+            h3 {
+                color: rgb(190, 60, 84);
+            }
+            h4 {
+                color: rgb(190, 60, 84);
+            }
+
+            div {
+                a {
+                    color: rgb(190, 60, 84);
+                }
+            }
+            ul {
+                li {
+                    color: rgb(180, 180, 180);
+                }
+            }
+
+            
+        }
+    }
+}
