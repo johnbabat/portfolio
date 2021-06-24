@@ -20,7 +20,7 @@ function App() {
 
   setTimeout(() => {
     setCame(false)
-  }, 1000);
+  }, 7000);
 
   return (
     <div className={`app${came ? ' justLanded': ''}`}>

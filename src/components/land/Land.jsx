@@ -35,8 +35,8 @@ function Land() {
             backSpeed: 10,
             typeSpeed: 450,
             disableBackTyping: true,
-            startDelay: 4300,
-            strings: ['.........']
+            startDelay: 4400,
+            strings: ['....']
         })
     }, [])
 
@@ -56,7 +56,7 @@ function Land() {
             }}/>
             <div className='text'>
                 <h1 style ={{color: 'white'}} className='h11'><span ref={textRef} ></span></h1>
-                <h1 style ={{color: 'white'}} className='h22'><span ref={textRef2} ></span><span ref={textRef3} ></span></h1>
+                <h1 style ={{color: 'white'}} className='h22'><span ref={textRef2} ></span><span ref={textRef3} ></span><span style={{color: 'black'}}>.</span></h1>
             </div>
         </div>
     )
