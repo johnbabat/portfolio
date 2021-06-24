@@ -11,39 +11,21 @@
     height: 100vh;
 
     .text {
-        margin: 0 auto;
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
         align-items: center;
+        flex-direction: column;
 
         .h11 {
-            position: fixed;
-            margin-left: 40%;
-            top: 400px;
-
-            @include tablet {
-                margin-left: 21%;
-                top: 350px;
-            }
-
             @include mobile {
-                top: 300px;
-                margin-left: 11%;
                 font-size: 25px;
             }
         }
 
         .h22 {
-            position: fixed;
-            margin-left: 38%;
-            top: 450px;
-
-            @include tablet {
-                margin-left: 20%;
-                top: 400px;
-            }
-
             @include mobile {
-                top: 340px;
-                margin-left: 9%;
                 font-size: 25px;
             }
             

@@ -14,101 +14,182 @@
     }
 
     .left {
-        flex: 1;
+        flex: 2;
         overflow: hidden;
         display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+        @include tablet {
+            flex: 1;
+        }
+
+        @include mobile {
+            flex: 1;
+        }
         
         img {
-            width: 100%;
+            width: 80%;
             object-fit: contain;
+
+            @include tablet {
+                width: 100%;
+            }
+
+            @include mobile {
+                width: 100%;
+            }
+
         }
     }
 
     .right {
         flex: 1;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
 
-        h2 {
-            font-size: 30px;
-            transition: all 2s ease;
+        @include tablet {
+            flex-direction: column;
         }
 
-        form {
-            width: 70%;
-            height: 60%;
+        @include mobile {
+            flex-direction: column;
+        }
+
+        .contact-form {
+
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-around;
-            z-index: 1;
+            justify-content: center;
+            width: 320px;
+            max-height: 700px;
+            height: 100%;
+            
 
-            @include tablet {
-                height: 80%;
+            h2 {
+                font-size: 30px;
+                transition: all 2s ease;
             }
-
-            @include tablet {
-                height: 90%;
-            }
-
-            input {
-                width: 300px;
-                height: 30px;
-                font-size: 14px;
-                border-radius: 7px;
-
-                &:focus {
-                    outline: none;
-                    border: 2px solid orange;
-                }
-
-                @include mobile {
-                    width: 200px;
-                    height: 20px;
-                }
-            }
-
-            textarea {
-                width: 300px;
-                height: 200px;
-                font-size: 14px;
-                border-radius: 10px;
-
-                &:focus {
-                    outline: none;
-                    border: 2px solid orange;
-                }
-
+    
+            form {
+                width: 100%;
+                height: 60%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                z-index: 1;
+    
                 @include tablet {
-                    height: 120px;
+                    height: 80%;
                 }
-
-                @include mobile {
-                    width: 200px;
-                    height: 100px;
+    
+                @include tablet {
+                    height: 90%;
                 }
-            }
+    
+                input {
+                    width: 290px;
+                    height: 30px;
+                    font-size: 14px;
+                    border-radius: 7px;
+                    padding: 5px 10px;
+    
+                    &:focus {
+                        outline: none;
+                        border: 2px solid orange;
+                    }
+    
+                    @include mobile {
+                        width: 200px;
+                        height: 20px;
+                    }
+                }
+    
+                textarea {
+                    width: 290px;
+                    height: 200px;
+                    font-size: 14px;
+                    border-radius: 10px;
+                    padding: 5px 10px;
+    
+                    &:focus {
+                        outline: none;
+                        border: 2px solid orange;
+                    }
+    
+                    @include tablet {
+                        height: 120px;
+                    }
+    
+                    @include mobile {
+                        width: 200px;
+                        height: 100px;
+                    }
+                }
+    
+                button {
+                    width: 150px;
+                    height: 30px;
+                    color: white;
+                    background-color: crimson;
+                    border: none;
+                    border-radius: 10px;
+                    font-weight: 500;
+                    cursor: pointer ;
 
-            button {
-                width: 150px;
-                height: 30px;
-                color: white;
-                background-color: crimson;
-                border: none;
-                border-radius: 10px;
-                font-weight: 500;
-                cursor: pointer ;
+                    &:hover {
+                        background-color: rgb(255, 0, 51);
+                    }
+                }
             }
         }
     }
 
+    .thank-you {
+        position: fixed;
+        top: 80px;
+        z-index: 3;
+        width: 100%;
+        text-align: center;
+        line-height: 60px;
+        transition: all 3s ease;
+
+        span {
+            background-color: white;
+            padding: 10px 20px;
+            box-shadow: .2em .2em .5em rgb(150, 150, 150);
+            transition: all 3s ease;
+
+            svg {
+                position: relative;
+                top: 5px;
+            }
+        }
+
+        &.hide {
+            top: -60px;
+            opacity: 0.1;
+            visibility: hidden;
+            transition: all 3s ease;
+        }
+    }
+    
+
     &.dark {
-        background-color: $mainColor;
-        background: linear-gradient(to right, rgb(253, 253, 253) 0%, $mainColor 100%);
+        background-color: rgb(13, 13, 49);
         color: white;
         transition: background-color 2s ease;
 
+        .thank-you {
+            span {
+                color: white;
+                background-color: rgb(43, 69, 139);
+                box-shadow: .1em .1em .5em rgb(142, 142, 163);
+            }
+        }
     }
 }

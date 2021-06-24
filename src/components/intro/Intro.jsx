@@ -53,12 +53,14 @@ function Intro( {toggleMode } ) {
                         <li>I have a very good grasp of data structures and algorithms. Coding challenges are my thing</li>
                         <li>Always learning something new, that's my favorite thing to do :)</li>
                     </ul>
+                    <div className="colors">
+                        <a className='attribution' style={{fontSize: '9px'}} href='https://pngtree.com/so/stage-decoration'>
+                            stage decoration png from pngtree.com
+                        </a>
+                    </div>
                 </div>
                 <a className='bottomLink' href='#portfolio'>
                     < Down/>
-                </a>
-                <a className='attribution bottomLink' style={{fontSize: '9px'}} href='https://pngtree.com/so/stage-decoration'>
-                    stage decoration png from pngtree.com
                 </a>
             </div>
         </div>

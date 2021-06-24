@@ -100,10 +100,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            background: url('./../../assests/images/colors.png') no-repeat;
-            background-size: 400px 400px;
-            background-position-x: 95%;
-            background-position-y: 100%;
+            position: relative;
 
             @include tablet {
                 background: none;
@@ -190,35 +187,38 @@
             }
 
             h4 {
-                font-size: 20px;
+                font-size: 25px;
                 margin-top: 15px;
                 color: rgb(119, 83, 89);
 
                 @include mobile {
-                    font-size: 12px;
-                    margin-top: 7px;
+                    font-size: 17px;
+                    margin-top: 10px;
                 }
 
                 @include sMobile {
-                    font-size: 11px;
-                    margin-top: 7px;
+                    font-size: 14px;
+                    margin-top: 9px;
                 }
             }
 
-            div {
+            .socials {
                 display: flex;
+                overflow: hidden;
 
                 @include mobile {
-                    height: 20px;
+                    height: 22px;
                 }
 
                 a {
-                    color: rgb(119, 83, 89);
-                    margin-right: 10px;
+                    overflow: hidden;
+                    color: rgb(161, 104, 111);
+                    margin-right: 12px;
 
                     svg {
                         @include mobile {
-                            width: 17px;
+                            width: 21px;
+                            height: 21px;
                         }
                     }
                 }
@@ -256,6 +256,25 @@
                     }
                 }
             }
+
+            .colors {
+                height: 400px;
+                width: 400px;
+                position: absolute;
+                background: url('./../../assests/images/colors.png') no-repeat;
+                background-size: 400px 400px;
+                bottom: 0;
+                right: 0;
+                opacity: 0.3;
+
+                .attribution {
+                    position: absolute;
+                    text-decoration: none;
+                    opacity: 0.7;
+                    color: green;
+                    bottom: 0;
+                }
+            }
         }
 
         .bottomLink {
@@ -280,21 +299,6 @@
 
             @keyframes arrowBlink {
                 100% {
-                    opacity: 0;
-                }
-            }
-
-            &.attribution {
-                left: 80%;
-                text-decoration: none;
-
-                @include tablet {
-                    visibility: hidden;
-                    opacity: 0;
-                }
-
-                @include mobile {
-                    visibility: hidden;
                     opacity: 0;
                 }
             }
@@ -328,12 +332,22 @@
                     color: rgb(180, 180, 180);
                 }
             }
+
+            .socials {
+                a {
+                    color: rgb(212, 197, 199);
+                }
+            }
         }
 
         .bottomLink {
             svg {
                 fill: white;
             }
+        }
+
+        .attribution {
+            color: pink !important;
         }
     }
 }

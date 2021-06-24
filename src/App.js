@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Topbar from './components/topbar/Topbar';
 import Intro from './components/intro/Intro';
 import Portfolio from './components/portfolio/Portfolio';
@@ -7,37 +7,20 @@ import Contact from './components/contact/Contact';
 import Menu from './components/menu/Menu';
 import Land from './components/land/Land';
 
-import { isChrome, vh } from './utils/checkIfChrome';
+// import { isChrome, vh } from './utils/checkIfChrome';
 
 import './App.scss';
 
 
 function App() {
 
-  const fixChromeScrollBug = (e) => {
-    if(isChrome) {
-      e.preventDefault()
-      const el = document.querySelector('.sections');
-      let dir
-      e.deltaY > 1 ? dir = 1 : dir = -1
-      el.scrollBy(0, dir*vh)
-    }
-  }
-
-  useEffect(() => {
-    const el = document.querySelector('.sections');
-    if (el) {
-      el.onwheel = fixChromeScrollBug
-    }
-  }, [])
-
   const [menuOpen, setMenuOpen] = useState(false)
   const [toggleMode, setToggleMode] = useState(false)
-  const [came, setCame] = useState(3)
+  const [came, setCame] = useState(true)
 
   setTimeout(() => {
-    setCame(0)
-  }, 8500);
+    setCame(false)
+  }, 1000);
 
   return (
     <div className={`app${came ? ' justLanded': ''}`}>

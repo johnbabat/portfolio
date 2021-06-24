@@ -8,22 +8,22 @@ export const featuredPortfolio = [
     },
     {
         id: 2,
+        title: "Portfolio",
+        img: "assets/images/portfolio.png",
+        github: "https://github.com/johnbabat/DSN-staff-promotion-algorithm"
+    },
+    {
+        id: 3,
         title: "WebSockets Chat App",
         img: "assets/images/chat-app.png",
         github: "https://github.com/johnbabat/web-sockets-chat-app",
         site: "https://glacial-dawn-82621.herokuapp.com/"
     },
     {
-        id: 3,
+        id: 4,
         title: "Fyurr Musical",
         img: "assets/images/fyurr-app.png",
         github: "https://github.com/johnbabat/fyurr-musical-app"
-    },
-    {
-        id: 4,
-        title: "Daily Coding Challenges",
-        img: "assets/images/daily-coding.png",
-        github: "https://github.com/johnbabat/Daily-Coding-Challenges"
     },
     {
         id: 5,
@@ -34,6 +34,12 @@ export const featuredPortfolio = [
     },
     {
         id: 6,
+        title: "Daily Coding Challenges",
+        img: "assets/images/daily-coding.png",
+        github: "https://github.com/johnbabat/Daily-Coding-Challenges"
+    },
+    {
+        id: 7,
         title: "Staff Promotion Model",
         img: "assets/images/staff-promotion.png",
         github: "https://github.com/johnbabat/DSN-staff-promotion-algorithm"

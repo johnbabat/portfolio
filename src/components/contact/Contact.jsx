@@ -1,14 +1,21 @@
 import { useState } from 'react';
 
+import { ReactComponent as Approve } from '../../assests/svgs/approve.svg';
+
 import './Contact.scss';
 
 function Contact({ toggleMode }) {
 
-    const [message, setMessage] = useState(false)
+    const [hide, setHide] = useState(true)
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        setMessage(true)
+        
+        setHide(false)
+
+        setTimeout(() => {
+            setHide(true)
+        }, 5000);
     }
 
     return (
@@ -17,14 +24,18 @@ function Contact({ toggleMode }) {
                 <img src='assets/images/contact.png' alt=''/>
             </div>
             <div className="right">
-                <h2>Contact</h2>
-                <form onSubmit={handleSubmit} >
-                    <input type='text' placeholder='Name' />
-                    <input type='text' placeholder='Email' />
-                    <textarea placeholder='Message'/>
-                    <button type='submit' >Send</button>
-                    {message && <span>Thanks, I would get back ASAP!</span>}
-                </form>
+                <div className="contact-form">
+                    <h2>Contact</h2>
+                    <form onSubmit={handleSubmit} >
+                        <input type='text' placeholder='Name' required />
+                        <input type='email' placeholder='Email' required />
+                        <textarea placeholder='Message' required/>
+                        <button type='submit'>Send</button>
+                    </form>
+                </div>
+            </div>
+            <div className={`thank-you${hide ? ' hide' : ''}`}>
+                <span>Thank you for your message. I will reach out shortly <Approve style = {{width: '20px', height: '20px'}} /></span>
             </div>
         </div>
     )

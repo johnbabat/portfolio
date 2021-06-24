@@ -1,6 +1,6 @@
 @import '../../global.scss';
 
-li {
+.portfolio-list {
     font-size: 14px;
     margin-right: 50px;
     padding: 7px;
@@ -9,6 +9,8 @@ li {
 
     @include mobile {
         margin-right: 10px;
+        font-size: 12px;
+        max-height: 20px;
     }
 
     &.active {
