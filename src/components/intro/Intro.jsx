@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { init } from 'ityped';
+
 import InstagramIcon from '@material-ui/icons/Instagram';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -7,7 +8,6 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 
 import BackgroundAnimation from '../backGroundAnimation/BackGroundAnimation';
 import { ReactComponent as Down } from '../../assests/svgs/down.svg';
-
 
 import './Intro.scss';
 
