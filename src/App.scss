@@ -29,12 +29,17 @@
     position: relative;
     top: 70px;
     scroll-behavior: smooth;
+    overflow-y: scroll;
     // scroll-snap-type: y mandatory;
     // scrollbar-width: none;
     // &::-webkit-scrollbar {
     //   display: none;
     // }
-    overflow-y: scroll;
+
+    @include mobile {
+      height: calc(100vh - 50px);
+      top: 50px;
+    }
 
     > * {
       width: 100vw;
@@ -44,11 +49,6 @@
       @include mobile {
         height: calc(100vh - 50px);
       }
-    }
-
-    @include mobile {
-      height: calc(100vh - 50px);
-      top: 50px;
     }
     
   }

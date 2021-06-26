@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import smoothscroll from 'smoothscroll-polyfill';
 
 import Topbar from './components/topbar/Topbar';
 import Intro from './components/intro/Intro';
@@ -12,6 +13,8 @@ import Land from './components/land/Land';
 
 import './App.scss';
 
+// kick off the polyfill!
+smoothscroll.polyfill();
 
 function App() {
 
@@ -22,6 +25,24 @@ function App() {
   setTimeout(() => {
     setCame(false)
   }, 7000);
+
+
+  // function SmoothVerticalScrolling(e, time, where) {
+  //   var eTop = e.getBoundingClientRect().top;
+  //   var eAmt = eTop / 100;
+  //   var curTime = 0;
+  //   while (curTime <= time) {
+  //     window.setTimeout(SVS_B, curTime, eAmt, where);
+  //     curTime += time / 100;
+  //   }
+  // }
+
+  // function SVS_B(eAmt, where) {
+  //   if(where == "center" || where == "")
+  //       window.scrollBy(0, eAmt / 2);
+  //   if (where == "top")
+  //       window.scrollBy(0, eAmt);
+  // }
 
   return (
     <div className={`app${came ? ' justLanded': ''}`}>

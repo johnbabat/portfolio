@@ -267,6 +267,13 @@
                 right: 0;
                 opacity: 0.3;
 
+                @include mobile {
+                    height: 0px;
+                    width: 0px;
+                    visibility: hidden;
+                    display: none;
+                }
+
                 .attribution {
                     position: absolute;
                     text-decoration: none;
