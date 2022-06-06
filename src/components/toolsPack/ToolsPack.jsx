@@ -25,8 +25,8 @@ export default function ToolsPack({ toggleMode }) {
             id: 1,
             icon: '/assets/images/frontend.png',
             title: 'Front-End Development Tools',
-            desc: ['React', 'Sass', 'CSS', 'jquery'],
-            images: ['assets/images/react.png', 'assets/images/sass.png', 'assets/images/css.png', 'assets/images/jquery.png']
+            desc: ['React', 'Sass', 'CSS', 'jquery', 'tailwind'],
+            images: ['assets/images/react.png', 'assets/images/sass.png', 'assets/images/css.png', 'assets/images/jquery.png', 'assets/images/tailwind.png']
         },
         {
             id: 1,

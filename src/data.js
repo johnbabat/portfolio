@@ -21,9 +21,10 @@ export const featuredPortfolio = [
     },
     {
         id: 4,
-        title: "Fyurr Musical",
-        img: "assets/images/fyurr-app.png",
-        github: "https://github.com/johnbabat/fyurr-musical-app"
+        title: "Dashboard Admin App",
+        img: "assets/images/admin-dashboard.png",
+        github: "https://github.com/johnbabat/react-dashboard-app",
+        site: "https://comforting-tiramisu-bef5b4.netlify.app/"
     },
     {
         id: 5,
@@ -34,15 +35,15 @@ export const featuredPortfolio = [
     },
     {
         id: 6,
-        title: "Daily Coding Challenges",
-        img: "assets/images/daily-coding.png",
-        github: "https://github.com/johnbabat/Daily-Coding-Challenges"
+        title: "Fyurr Musical",
+        img: "assets/images/fyurr-app.png",
+        github: "https://github.com/johnbabat/fyurr-musical-app"
     },
     {
         id: 7,
-        title: "Staff Promotion Model",
-        img: "assets/images/staff-promotion.png",
-        github: "https://github.com/johnbabat/DSN-staff-promotion-algorithm"
+        title: "Daily Coding Challenges",
+        img: "assets/images/daily-coding.png",
+        github: "https://github.com/johnbabat/Daily-Coding-Challenges"
     }
 ]
 
@@ -71,6 +72,13 @@ export const webPortfolio = [
     },
     {
         id: 4,
+        title: "Dashboard Admin App",
+        img: "assets/images/admin-dashboard.png",
+        github: "https://github.com/johnbabat/react-dashboard-app",
+        site: "https://comforting-tiramisu-bef5b4.netlify.app/"
+    },
+    {
+        id: 4,
         title: "Netflix Clone",
         img: "assets/images/netflix-clone.png",
         github: "https://github.com/johnbabat/netflix-clone",
@@ -91,10 +99,10 @@ export const webPortfolio = [
     },
     {
         id: 7,
-        title: "RGB Color Picker Game",
-        img: "assets/images/rgb-game.png",
-        github: "https://github.com/johnbabat/rgb-color-picker-game",
-        site: "https://johnbabatola-rgb-color-picker.herokuapp.com/"
+        title: "Dashboard Admin App",
+        img: "assets/images/admin-dashboard.png",
+        github: "https://github.com/johnbabat/react-dashboard-app",
+        site: "https://comforting-tiramisu-bef5b4.netlify.app/"
     },
     {
         id: 8,
