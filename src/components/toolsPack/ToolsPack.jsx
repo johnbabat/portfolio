@@ -11,9 +11,10 @@ export default function ToolsPack({ toggleMode }) {
             id: 1,
             icon: '/assets/images/mobile.png',
             title: 'Back-End Development Tools',
-            desc: ['Javascript', 'GraphQL', 'Python', 'Flask', 'Node', 'MongoDB', 'PostgreSQL'],
+            desc: ['Javascript/TypeScript', 'GraphQL', 'Python', 'Flask', 'Node', 'MongoDB', 'PostgreSQL'],
             images: [
                 'assets/images/javascript.png',
+                'assets/images/typescript.png',
                 'assets/images/graphql.png',
                 'assets/images/python.png',
                 'assets/images/flask.png',
@@ -25,8 +26,8 @@ export default function ToolsPack({ toggleMode }) {
             id: 1,
             icon: '/assets/images/frontend.png',
             title: 'Front-End Development Tools',
-            desc: ['React', 'Sass', 'CSS', 'jquery', 'tailwind'],
-            images: ['assets/images/react.png', 'assets/images/sass.png', 'assets/images/css.png', 'assets/images/jquery.png', 'assets/images/tailwind.png']
+            desc: ['React', 'Next.js', 'Sass', 'Redux', 'CSS', 'TypeScript', 'jquery', 'tailwind'],
+            images: ['assets/images/react.png', 'assets/images/next.png', 'assets/images/redux.png', 'assets/images/sass.png', 'assets/images/css.png', 'assets/images/typescript.png', 'assets/images/jquery.png', 'assets/images/tailwind.png']
         },
         {
             id: 1,
